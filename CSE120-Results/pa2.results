@@ -1,0 +1,494 @@
+******  PA2 Test Results: cs120wqz, Fri Jan 29 14:11:23 PST 2021  ******
+
+Total tests passed = 9 out of 12     Total points = 4.5 out of 6 ( 75%)
+
+
+******  Individual Test Results  ******
+
+Compiling mycode2.c
+pa2grader.c:
+mycode2.c:
+
+*****  TEST FIFO0 Student Output  *****
+
+> Tests FIFO with five processes
+> 	- PID	Arr	Serv	Notes
+> 	-  1	 0	10
+> 	-  2	 0	20	arrives after 1
+> 	-  3	 0	15	arrives after 2
+> 	-  4	10	30
+> 	-  5	45	20
+
+Report (ticks: 10, scheds: 1):
+PID: 1, Expected: 100.00%, Got: 100.00% (10/10), Ticks: 10
+Other PIDs, Expected: 0%, Got: 0.00% (0/10)
+
+Report (ticks: 20, scheds: 1):
+PID: 2, Expected: 100.00%, Got: 100.00% (20/20), Ticks: 20
+Other PIDs, Expected: 0%, Got: 0.00% (0/20)
+
+Report (ticks: 15, scheds: 1):
+PID: 3, Expected: 100.00%, Got: 100.00% (15/15), Ticks: 15
+Other PIDs, Expected: 0%, Got: 0.00% (0/15)
+
+Report (ticks: 30, scheds: 1):
+PID: 4, Expected: 100.00%, Got: 100.00% (30/30), Ticks: 30
+Other PIDs, Expected: 0%, Got: 0.00% (0/30)
+
+Report (ticks: 20, scheds: 1):
+PID: 5, Expected: 100.00%, Got: 100.00% (20/20), Ticks: 20
+Other PIDs, Expected: 0%, Got: 0.00% (0/20)
+
+All processes within margin of error and no other errors:  ***** YES
+
+Test PASSED
+
+
+*****  TEST FIFO1 Student Output  *****
+
+> Tests FIFO with MAXPROCS processes
+> 	- PID	Arr	Serv	Notes
+> 	-  1	 0	10
+> 	-  2	 0	 1	arrives after 1
+> 	-  3	 0	 2	arrives after 2
+> 	-  4	 0	 1	arrives after 3
+> 	-  5	13	20
+> 	-  6	13	 1	arrives after 5
+> 	-  7	13	 1	arrives after 6
+> 	-  8	13	 1	arrives after 7
+> 	-  9	14	 1
+> 	- 10 	34	 1
+
+Report (ticks: 10, scheds: 1):
+PID: 1, Expected: 100.00%, Got: 100.00% (10/10), Ticks: 10
+Other PIDs, Expected: 0%, Got: 0.00% (0/10)
+
+Report (ticks: 1, scheds: 1):
+PID: 2, Expected: 100.00%, Got: 100.00% (1/1), Ticks: 1
+Other PIDs, Expected: 0%, Got: 0.00% (0/1)
+
+Report (ticks: 2, scheds: 1):
+PID: 3, Expected: 100.00%, Got: 100.00% (2/2), Ticks: 2
+Other PIDs, Expected: 0%, Got: 0.00% (0/2)
+
+Report (ticks: 1, scheds: 1):
+PID: 4, Expected: 100.00%, Got: 100.00% (1/1), Ticks: 1
+Other PIDs, Expected: 0%, Got: 0.00% (0/1)
+
+Report (ticks: 20, scheds: 1):
+PID: 5, Expected: 100.00%, Got: 100.00% (20/20), Ticks: 20
+Other PIDs, Expected: 0%, Got: 0.00% (0/20)
+
+Report (ticks: 1, scheds: 1):
+PID: 6, Expected: 100.00%, Got: 100.00% (1/1), Ticks: 1
+Other PIDs, Expected: 0%, Got: 0.00% (0/1)
+
+Report (ticks: 1, scheds: 1):
+PID: 7, Expected: 100.00%, Got: 100.00% (1/1), Ticks: 1
+Other PIDs, Expected: 0%, Got: 0.00% (0/1)
+
+Report (ticks: 1, scheds: 1):
+PID: 8, Expected: 100.00%, Got: 100.00% (1/1), Ticks: 1
+Other PIDs, Expected: 0%, Got: 0.00% (0/1)
+
+Report (ticks: 1, scheds: 1):
+PID: 9, Expected: 100.00%, Got: 100.00% (1/1), Ticks: 1
+Other PIDs, Expected: 0%, Got: 0.00% (0/1)
+
+Report (ticks: 1, scheds: 1):
+PID: 10, Expected: 100.00%, Got: 100.00% (1/1), Ticks: 1
+Other PIDs, Expected: 0%, Got: 0.00% (0/1)
+
+All processes within margin of error and no other errors:  ***** YES
+
+Test PASSED
+
+
+*****  TEST LIFO0 Student Output  *****
+
+> Tests LIFO with four processes
+> 	- PID	Arr	Serv	Notes
+> 	-  1	0	15
+> 	-  2	0	20	arrives after 1
+> 	-  3	0	10	arrives after 2
+> 	-  4	20	20	
+
+Report (ticks: 10, scheds: 3):
+PID: 3, Expected: 100.00%, Got: 100.00% (10/10), Ticks: 10
+Other PIDs, Expected: 0%, Got: 0.00% (0/10)
+
+Report (ticks: 10, scheds: 1):
+PID: 2, Expected: 100.00%, Got: 100.00% (10/10), Ticks: 10
+Other PIDs, Expected: 0%, Got: 0.00% (0/10)
+
+Report (ticks: 20, scheds: 1):
+PID: 4, Expected: 100.00%, Got: 100.00% (20/20), Ticks: 20
+Other PIDs, Expected: 0%, Got: 0.00% (0/20)
+
+Report (ticks: 10, scheds: 1):
+PID: 2, Expected: 100.00%, Got: 100.00% (10/10), Ticks: 10
+Other PIDs, Expected: 0%, Got: 0.00% (0/10)
+
+Report (ticks: 15, scheds: 1):
+PID: 1, Expected: 100.00%, Got: 100.00% (15/15), Ticks: 15
+Other PIDs, Expected: 0%, Got: 0.00% (0/15)
+
+All processes within margin of error and no other errors:  ***** YES
+
+Test PASSED
+
+
+*****  TEST LIFO1 Student Output  *****
+
+> Tests LIFO with MAXPROCS processes
+> 	- PID	Arr	Serv	Notes
+> 	-  1	 0	 1
+> 	-  2	 0	 1	arrives after 1
+> 	-  3	 0	21	arrives after 2
+> 	-  4	 0	 3	arrives after 3
+> 	-  5	 0	 1	arrives after 4
+> 	-  6	 1	 2
+> 	-  7	26	 1	arrives after 6
+> 	-  8	26	 1	arrives after 7
+> 	-  9	26	 1	arrives after 8
+> 	- 10 	26	 1	arrives after 9
+
+Report (ticks: 1, scheds: 5):
+PID: 5, Expected: 100.00%, Got: 100.00% (1/1), Ticks: 1
+Other PIDs, Expected: 0%, Got: 0.00% (0/1)
+
+Report (ticks: 1, scheds: 1):
+PID: 4, Expected: 100.00%, Got: 100.00% (1/1), Ticks: 1
+Other PIDs, Expected: 0%, Got: 0.00% (0/1)
+
+Report (ticks: 2, scheds: 1):
+PID: 6, Expected: 100.00%, Got: 100.00% (2/2), Ticks: 2
+Other PIDs, Expected: 0%, Got: 0.00% (0/2)
+
+Report (ticks: 2, scheds: 1):
+PID: 4, Expected: 100.00%, Got: 100.00% (2/2), Ticks: 2
+Other PIDs, Expected: 0%, Got: 0.00% (0/2)
+
+Report (ticks: 20, scheds: 1):
+PID: 3, Expected: 100.00%, Got: 100.00% (20/20), Ticks: 20
+Other PIDs, Expected: 0%, Got: 0.00% (0/20)
+
+Report (ticks: 1, scheds: 4):
+PID: 10, Expected: 100.00%, Got: 100.00% (1/1), Ticks: 1
+Other PIDs, Expected: 0%, Got: 0.00% (0/1)
+
+Report (ticks: 1, scheds: 1):
+PID: 9, Expected: 100.00%, Got: 100.00% (1/1), Ticks: 1
+Other PIDs, Expected: 0%, Got: 0.00% (0/1)
+
+Report (ticks: 1, scheds: 1):
+PID: 8, Expected: 100.00%, Got: 100.00% (1/1), Ticks: 1
+Other PIDs, Expected: 0%, Got: 0.00% (0/1)
+
+Report (ticks: 1, scheds: 1):
+PID: 7, Expected: 100.00%, Got: 100.00% (1/1), Ticks: 1
+Other PIDs, Expected: 0%, Got: 0.00% (0/1)
+
+Report (ticks: 1, scheds: 1):
+PID: 3, Expected: 100.00%, Got: 100.00% (1/1), Ticks: 1
+Other PIDs, Expected: 0%, Got: 0.00% (0/1)
+
+Report (ticks: 1, scheds: 1):
+PID: 2, Expected: 100.00%, Got: 100.00% (1/1), Ticks: 1
+Other PIDs, Expected: 0%, Got: 0.00% (0/1)
+
+Report (ticks: 1, scheds: 1):
+PID: 1, Expected: 100.00%, Got: 100.00% (1/1), Ticks: 1
+Other PIDs, Expected: 0%, Got: 0.00% (0/1)
+
+All processes within margin of error and no other errors:  ***** YES
+
+Test PASSED
+
+
+*****  TEST RRBN0 Student Output  *****
+
+> Tests ROUNDROBIN with four processes, all arrive at time 0
+> 	- PID	Arr	Serv	Notes
+> 	-  1	 0	 250
+> 	-  2	 0	 250	arrives after 1
+> 	-  3	 0	 250	arrives after 2
+> 	-  4	 0	 250	arrives after 3
+
+Report (ticks: 1000, scheds: 1001):
+PID: 1, Expected: 25.00%, Got: 25.00% (250/1000), Ticks: 250
+PID: 2, Expected: 25.00%, Got: 25.00% (250/1000), Ticks: 250
+PID: 3, Expected: 25.00%, Got: 25.00% (250/1000), Ticks: 250
+PID: 4, Expected: 25.00%, Got: 25.00% (250/1000), Ticks: 250
+Other PIDs, Expected: 0%, Got: 0.00% (0/1000)
+
+All processes within margin of error and no other errors:  ***** YES
+
+Test PASSED
+
+
+*****  TEST RRBN1 Student Output  *****
+
+> Tests ROUNDROBIN with MAXPROCS processes
+> 	- PID	Arr	Serv	Notes
+> 	-  1	  0	 20
+> 	-  2	  0	 20	arrives after 1
+> 	-  3	  0	 20	arrives after 2
+> 	-  4	  0	 20	arrives after 3
+> 	-  5	  0	228.33	arrives after 4
+> 	-  6	200	108.33
+> 	-  7	200	 83.33	arrives after 6
+> 	-  8	200	108.33	arrives after 7
+> 	-  9	200	 83.33	arrives after 8
+> 	- 10	200	108.33	arrives after 9
+
+Report (ticks: 100, scheds: 101):
+PID: 1, Expected: 20.00%, Got: 20.00% (20/100), Ticks: 20
+PID: 2, Expected: 20.00%, Got: 20.00% (20/100), Ticks: 20
+PID: 3, Expected: 20.00%, Got: 20.00% (20/100), Ticks: 20
+PID: 4, Expected: 20.00%, Got: 20.00% (20/100), Ticks: 20
+PID: 5, Expected: 20.00%, Got: 20.00% (20/100), Ticks: 20
+Other PIDs, Expected: 0%, Got: 0.00% (0/100)
+
+Report (ticks: 100, scheds: 100):
+PID: 5, Expected: 100.00%, Got: 97.00% (97/100), Ticks: 97
+Other PIDs, Expected: 0%, Got: 3.00% (3/100)
+
+Report (ticks: 500, scheds: 500):
+PID: 5, Expected: 16.66%, Got: 16.80% (84/500), Ticks: 84
+PID: 6, Expected: 16.66%, Got: 16.60% (83/500), Ticks: 83
+PID: 7, Expected: 16.66%, Got: 16.60% (83/500), Ticks: 83
+PID: 8, Expected: 16.66%, Got: 16.60% (83/500), Ticks: 83
+PID: 9, Expected: 16.66%, Got: 16.60% (83/500), Ticks: 83
+PID: 10, Expected: 16.66%, Got: 16.80% (84/500), Ticks: 84
+Other PIDs, Expected: 0%, Got: 0.00% (0/500)
+
+Report (ticks: 100, scheds: 100):
+PID: 5, Expected: 25.00%, Got: 25.00% (25/100), Ticks: 25
+PID: 6, Expected: 25.00%, Got: 25.00% (25/100), Ticks: 25
+PID: 8, Expected: 25.00%, Got: 26.00% (26/100), Ticks: 26
+PID: 10, Expected: 25.00%, Got: 24.00% (24/100), Ticks: 24
+Other PIDs, Expected: 0%, Got: 0.00% (0/100)
+
+All processes within margin of error and no other errors:  ***** YES
+
+Test PASSED
+
+
+*****  TEST PROP0 Student Output  *****
+
+> Tests PROPORTIONAL with two processes, each requesting 50%
+> 	- PID	Arr	Serv	Req	Notes
+> 	-  1	 0	500	50%
+> 	-  2	 0	500	50%	arrives after 1
+
+Report (ticks: 1000, scheds: 1001):
+PID: 1, Expected: 50.00%, Got: 50.10% (501/1000), Ticks: 501
+PID: 2, Expected: 50.00%, Got: 49.90% (499/1000), Ticks: 499
+Other PIDs, Expected: 0%, Got: 0.00% (0/1000)
+
+All processes within margin of error and no other errors:  ***** YES
+
+Test PASSED
+
+
+*****  TEST PROP1 Student Output  *****
+
+> Tests PROPORTIONAL with five processes, checking various situations:
+> 		- when a new process is created
+> 		- when a new process requests some CPU rate
+> 		- when a requested process exits
+> 		- when an unrequested process exits
+> 	Specifically:
+> 		- p1 and p2 are created; p1 requests 10%, p2 requests 20%
+> 		- p3 is created: makes no specific request
+> 		- p4 and p5 are created: each make no specific request
+> 		- p5 exits
+> 		- p3 requests 40%
+> 		- p1 exits
+> 	- TimePeriod	 1	2	3	4	5
+> 	-    0- 500	10%	20%
+> 	-  500-1000	10%	20%	(70%)
+> 	- 1000-1500	10%	20%	(23.3%)	(23.3%)	(23.3%)
+> 	- 1500-2000	10%	20%	(35%)	(35%)
+> 	- 2000-2500	10%	20%	40%	(30%)
+> 	- 2500-3000		20%	40%	(40%)
+> 	- values in () indicate unallocated expected rates
+
+Report (ticks: 500, scheds: 501):
+PID: 1, Expected: 10.00%, Got: 44.60% (223/500), Ticks: 223
+PID: 2, Expected: 20.00%, Got: 55.40% (277/500), Ticks: 277
+Other PIDs, Expected: 0%, Got: 0.00% (0/500)
+
+Report (ticks: 500, scheds: 500):
+PID: 1, Expected: 10.00%, Got: 45.00% (225/500), Ticks: 225
+PID: 2, Expected: 20.00%, Got: 55.00% (275/500), Ticks: 275
+PID: 3, Expected: 70.00%, Got: 0.00% (0/500), Ticks: 0
+Other PIDs, Expected: 0%, Got: 0.00% (0/500)
+** Error: process (3) getting less than expected CPU rate
+
+Report (ticks: 500, scheds: 500):
+PID: 1, Expected: 10.00%, Got: 45.00% (225/500), Ticks: 225
+PID: 2, Expected: 20.00%, Got: 55.00% (275/500), Ticks: 275
+PID: 3, Expected: 23.33%, Got: 0.00% (0/500), Ticks: 0
+PID: 4, Expected: 23.33%, Got: 0.00% (0/500), Ticks: 0
+PID: 5, Expected: 23.33%, Got: 0.00% (0/500), Ticks: 0
+Other PIDs, Expected: 0%, Got: 0.00% (0/500)
+** Error: processes (3, 4, 5) getting less than expected CPU rate
+
+Report (ticks: 500, scheds: 500):
+PID: 1, Expected: 10.00%, Got: 45.00% (225/500), Ticks: 225
+PID: 2, Expected: 20.00%, Got: 55.00% (275/500), Ticks: 275
+PID: 3, Expected: 35.00%, Got: 0.00% (0/500), Ticks: 0
+PID: 4, Expected: 35.00%, Got: 0.00% (0/500), Ticks: 0
+Other PIDs, Expected: 0%, Got: 0.00% (0/500)
+** Error: processes (3, 4) getting less than expected CPU rate
+
+Report (ticks: 500, scheds: 500):
+PID: 1, Expected: 10.00%, Got: 45.00% (225/500), Ticks: 225
+PID: 2, Expected: 20.00%, Got: 55.00% (275/500), Ticks: 275
+PID: 3, Expected: 40.00%, Got: 0.00% (0/500), Ticks: 0
+PID: 4, Expected: 30.00%, Got: 0.00% (0/500), Ticks: 0
+Other PIDs, Expected: 0%, Got: 0.00% (0/500)
+** Error: processes (3, 4) getting less than expected CPU rate
+
+Report (ticks: 500, scheds: 500):
+PID: 2, Expected: 20.00%, Got: 0.00% (0/500), Ticks: 0
+PID: 3, Expected: 40.00%, Got: 50.20% (251/500), Ticks: 251
+PID: 4, Expected: 40.00%, Got: 49.80% (249/500), Ticks: 249
+Other PIDs, Expected: 0%, Got: 0.00% (0/500)
+** Error: process (2) getting less than expected CPU rate
+
+All processes within margin of error and no other errors:  ***** NO
+
+Test FAILED
+
+
+*****  TEST PROP2 Student Output  *****
+
+> Tests PROPORTIONAL, checking various situations:
+> 	- should return -1 (FAIL) if
+> 		- request rate = -1, 101 (%)
+> 		- total rate > 100%
+> 	- should return 0 (SUCCESS) if
+> 		- request rate = 0 (%)
+> 		- process makes requests multiple times
+> 		- total rate does not exceed 100%
+> 	- Time		 1	2	3	4	5	Notes
+> 	-    0		 0%					should succeed
+> 	-    0		 	101%				should fail
+> 	-    0		 		 -1%			should fail
+> 	-    0		100%					should succeed
+> 	-    0- 500	100%	 (0%)	 (0%)
+> 	-  500		 25%					should succeed
+> 	-  500		 	 50%				should succeed
+> 	-  500-1000	 25%	 50%	(25%)
+> 	- 1000				 26%			should fail
+> 	- 1000				 20%			should succeed
+> 	- 1000-2000	 25%	 50%	 20%
+> 	- values in () indicate unallocated expected rates
+
+Report (ticks: 500, scheds: 501):
+PID: 1, Expected: 100.00%, Got: 100.00% (500/500), Ticks: 500
+Other PIDs, Expected: 0%, Got: 0.00% (0/500)
+
+Error: MyRequestCPUrate (1, 25): returned incorrect value -1
+Report (ticks: 500, scheds: 500):
+PID: 1, Expected: 25.00%, Got: 100.00% (500/500), Ticks: 500
+PID: 2, Expected: 50.00%, Got: 0.00% (0/500), Ticks: 0
+PID: 3, Expected: 25.00%, Got: 0.00% (0/500), Ticks: 0
+Other PIDs, Expected: 0%, Got: 0.00% (0/500)
+** Error: processes (2, 3) getting less than expected CPU rate
+
+Report (ticks: 1000, scheds: 1000):
+PID: 1, Expected: 25.00%, Got: 100.00% (1000/1000), Ticks: 1000
+PID: 2, Expected: 50.00%, Got: 0.00% (0/1000), Ticks: 0
+PID: 3, Expected: 20.00%, Got: 0.00% (0/1000), Ticks: 0
+Other PIDs, Expected: 0%, Got: 0.00% (0/1000)
+** Error: processes (2, 3) getting less than expected CPU rate
+
+All processes within margin of error and no other errors:  ***** NO
+
+Test FAILED
+
+
+*****  TEST PROP3 Student Output  *****
+
+> Tests PROPORTIONAL with MAXPROCS processes
+> 	- CPU rate should be equally allocated to all unrequesting processes
+> 	- Time
+> 	-    0		start ten processes, none making requests
+> 	-    0-1000	each process should get (10%) of CPU
+> 	- 1000		p1 requests 20%, p5 requests 40%
+> 	- 1000-2000	p1 gets 20%, p5 gets 40%, p2-p4 and p6-p10 get (5%)
+> 	- values in () indicate unallocated expected rates
+
+Report (ticks: 1000, scheds: 1001):
+PID: 1, Expected: 10.00%, Got: 100.00% (1000/1000), Ticks: 1000
+PID: 2, Expected: 10.00%, Got: 0.00% (0/1000), Ticks: 0
+PID: 3, Expected: 10.00%, Got: 0.00% (0/1000), Ticks: 0
+PID: 4, Expected: 10.00%, Got: 0.00% (0/1000), Ticks: 0
+PID: 5, Expected: 10.00%, Got: 0.00% (0/1000), Ticks: 0
+PID: 6, Expected: 10.00%, Got: 0.00% (0/1000), Ticks: 0
+PID: 7, Expected: 10.00%, Got: 0.00% (0/1000), Ticks: 0
+PID: 8, Expected: 10.00%, Got: 0.00% (0/1000), Ticks: 0
+PID: 9, Expected: 10.00%, Got: 0.00% (0/1000), Ticks: 0
+PID: 10, Expected: 10.00%, Got: 0.00% (0/1000), Ticks: 0
+Other PIDs, Expected: 0%, Got: 0.00% (0/1000)
+** Error: processes (2, 3, 4, 5, 6, 7, 8, 9, 10) getting less than expected CPU rate
+
+Report (ticks: 1000, scheds: 1000):
+PID: 1, Expected: 20.00%, Got: 20.10% (201/1000), Ticks: 201
+PID: 2, Expected: 5.00%, Got: 5.10% (51/1000), Ticks: 51
+PID: 3, Expected: 5.00%, Got: 5.10% (51/1000), Ticks: 51
+PID: 4, Expected: 5.00%, Got: 5.10% (51/1000), Ticks: 51
+PID: 5, Expected: 40.00%, Got: 39.60% (396/1000), Ticks: 396
+PID: 6, Expected: 5.00%, Got: 5.00% (50/1000), Ticks: 50
+PID: 7, Expected: 5.00%, Got: 5.00% (50/1000), Ticks: 50
+PID: 8, Expected: 5.00%, Got: 5.00% (50/1000), Ticks: 50
+PID: 9, Expected: 5.00%, Got: 5.00% (50/1000), Ticks: 50
+PID: 10, Expected: 5.00%, Got: 5.00% (50/1000), Ticks: 50
+Other PIDs, Expected: 0%, Got: 0.00% (0/1000)
+
+All processes within margin of error and no other errors:  ***** NO
+
+Test FAILED
+
+
+*****  TEST PROP4 Student Output  *****
+
+> Tests PROPORTIONAL over long period of time
+> 	- period of time = 1000000
+> 	- three processes: p1 requests 10%, p2 requests 20%, p3 requests 70%
+> 	- Time			1	2	3
+> 	-    0-1000000		10%	20%	70%
+
+Report (ticks: 1000000, scheds: 1000001):
+PID: 1, Expected: 10.00%, Got: 9.86% (98593/1000000), Ticks: 98593
+PID: 2, Expected: 20.00%, Got: 19.72% (197184/1000000), Ticks: 197184
+PID: 3, Expected: 70.00%, Got: 70.42% (704223/1000000), Ticks: 704223
+Other PIDs, Expected: 0%, Got: 0.00% (0/1000000)
+
+All processes within margin of error and no other errors:  ***** YES
+
+Test PASSED
+
+
+*****  TEST PROP5 Student Output  *****
+
+> Tests PROPORTIONAL, where one process requests 99%:
+> 	processes which didn't request should still run
+> 	- Time			1	2	3
+> 	-    0-1000		99%	(0.5%)	(0.5%)
+> 	- values in () indicate unallocated expected rates
+
+Report (ticks: 1000, scheds: 1001):
+PID: 1, Expected: 99.00%, Got: 98.00% (980/1000), Ticks: 980
+PID: 2, Expected: 0.50%, Got: 1.00% (10/1000), Ticks: 10
+PID: 3, Expected: 0.50%, Got: 1.00% (10/1000), Ticks: 10
+Other PIDs, Expected: 0%, Got: 0.00% (0/1000)
+
+All processes within margin of error and no other errors:  ***** YES
+
+Test PASSED
+

@@ -1,0 +1,1185 @@
+******  PA3 Test Results: cs120wqz, Fri Feb 19 16:28:29 PST 2021  ******
+
+Total tests passed = 9 out of 12     Total points = 6.75 out of 9 ( 75%)
+
+
+******  Individual Test Results  ******
+
+%%%%%%%%%%%%%%%%%%%%%% SEMAPHORE TESTS %%%%%%%%%%%%%%%%%%%%%%
+
+> *************** Semaphore Test 1 ***************
+>	- Initialize sem1 to 0
+>	- Process 0 runs, delays by 400
+>	- Process 1 waits on sem1
+>	- Process 0 done with delay
+>	- Process 0 signals sem1
+>	- Process 1 unblocks
+
+----------EXPECTED----------
+
+Initializing sem1 with 0
+Process 0 activated.
+Process 0 delay 400.
+Process 1 waiting on sem1.
+Process 0 done with delay.
+Process 0 signaling sem1.
+Process 1 got sem1.
+
+System exiting (normal)
+----------------------------
+-----------ACTUAL-----------
+
+Initializing sem1 with 0
+Process 0 activated.
+Process 0 delay 400.
+Process 1 waiting on sem1.
+Process 0 done with delay.
+Process 0 signaling sem1.
+Process 1 got sem1.
+
+System exiting (normal)
+----------------------------
+----------DIFFERENCE--------
+No differences encountered
+----------------------------
+
+.............................. Test PASSED, worth 0.75 points
+
+> *************** Semaphore Test 2 ***************
+>	- Initialize sem1 to 0
+>	- Process 1 runs, delays for 400
+>	- Process 2 waits on sem1
+>	- Process 3 waits on sem1
+>	- Process 4 waits on sem1
+>	- Process 1 done with delay, signals sem1
+>	- One process should unblock and exit
+>	- Process 1 signals sem1
+>	- Another process should unblock and exit
+>	- Process 1 signals sem1
+>	- Another process should unblock and exit
+>	- Process 1 exits
+
+----------EXPECTED----------
+
+Initializing sem1 with 0
+Process 1 activated.
+Process 1 delay 400.
+Process 2 waiting on sem1.
+Process 3 waiting on sem1.
+Process 4 waiting on sem1.
+Process 1 done with delay.
+Process 1 is about to signal sem1 3 times.
+Process 1 signaling 1 time.
+One process got sem1 and is about to exit.
+Process 1 signaling 2 time.
+One process got sem1 and is about to exit.
+Process 1 signaling 3 time.
+One process got sem1 and is about to exit.
+Process 1 exits.
+
+System exiting (normal)
+----------------------------
+-----------ACTUAL-----------
+
+Initializing sem1 with 0
+Process 1 activated.
+Process 1 delay 400.
+Process 2 waiting on sem1.
+Process 3 waiting on sem1.
+Process 4 waiting on sem1.
+Process 1 done with delay.
+Process 1 is about to signal sem1 3 times.
+Process 1 signaling 1 time.
+One process got sem1 and is about to exit.
+Process 1 signaling 2 time.
+One process got sem1 and is about to exit.
+Process 1 signaling 3 time.
+One process got sem1 and is about to exit.
+Process 1 exits.
+
+System exiting (normal)
+----------------------------
+----------DIFFERENCE--------
+No differences encountered
+----------------------------
+
+.............................. Test PASSED, worth 0.75 points
+
+> *************** Semaphore Test 3 ***************
+>	- Initialize sem1 to 0
+>	- Initialize sem2 to 0
+>	- Process 1 runs, delays for 400
+>	- Processes 2-10 all wait on sem1
+>	- Process 1 done with delay, signals sem1 9 times
+>	- Each process that unblocks then waits on sem2
+>	- Process 1 signals sem2 9 times
+>	- Each process that unblocks then waits on sem1
+>	- Process 1 signals sem1 9 times
+>	- Each process that unblocks then exits
+>	- Process 1 exits
+
+----------EXPECTED----------
+
+Initializing sem1 with 0
+Initializing sem2 with 0
+Process 1 activated.
+Process 1 delay 400.
+Process 2 waiting on sem1.
+Process 3 waiting on sem1.
+Process 4 waiting on sem1.
+Process 5 waiting on sem1.
+Process 6 waiting on sem1.
+Process 7 waiting on sem1.
+Process 8 waiting on sem1.
+Process 9 waiting on sem1.
+Process 10 waiting on sem1.
+Process 1 done with delay.
+
+Process 1 is about to signal sem1 9 times.
+Process 1 signaling sem1 1 time.
+One process got sem1 and is about to wait sem2.
+Process 1 signaling sem1 2 time.
+One process got sem1 and is about to wait sem2.
+Process 1 signaling sem1 3 time.
+One process got sem1 and is about to wait sem2.
+Process 1 signaling sem1 4 time.
+One process got sem1 and is about to wait sem2.
+Process 1 signaling sem1 5 time.
+One process got sem1 and is about to wait sem2.
+Process 1 signaling sem1 6 time.
+One process got sem1 and is about to wait sem2.
+Process 1 signaling sem1 7 time.
+One process got sem1 and is about to wait sem2.
+Process 1 signaling sem1 8 time.
+One process got sem1 and is about to wait sem2.
+Process 1 signaling sem1 9 time.
+One process got sem1 and is about to wait sem2.
+
+Process 1 is about to signal sem2 9 times.
+Process 1 signaling sem2 1 time.
+One process got sem2 and is about to wait sem1 again.
+Process 1 signaling sem2 2 time.
+One process got sem2 and is about to wait sem1 again.
+Process 1 signaling sem2 3 time.
+One process got sem2 and is about to wait sem1 again.
+Process 1 signaling sem2 4 time.
+One process got sem2 and is about to wait sem1 again.
+Process 1 signaling sem2 5 time.
+One process got sem2 and is about to wait sem1 again.
+Process 1 signaling sem2 6 time.
+One process got sem2 and is about to wait sem1 again.
+Process 1 signaling sem2 7 time.
+One process got sem2 and is about to wait sem1 again.
+Process 1 signaling sem2 8 time.
+One process got sem2 and is about to wait sem1 again.
+Process 1 signaling sem2 9 time.
+One process got sem2 and is about to wait sem1 again.
+
+Process 1 is about to signal sem1 9 times.
+Process 1 signaling sem1 1 time.
+One process got sem1 and is about to exit.
+Process 1 signaling sem1 2 time.
+One process got sem1 and is about to exit.
+Process 1 signaling sem1 3 time.
+One process got sem1 and is about to exit.
+Process 1 signaling sem1 4 time.
+One process got sem1 and is about to exit.
+Process 1 signaling sem1 5 time.
+One process got sem1 and is about to exit.
+Process 1 signaling sem1 6 time.
+One process got sem1 and is about to exit.
+Process 1 signaling sem1 7 time.
+One process got sem1 and is about to exit.
+Process 1 signaling sem1 8 time.
+One process got sem1 and is about to exit.
+Process 1 signaling sem1 9 time.
+One process got sem1 and is about to exit.
+
+Process 1 exits.
+
+System exiting (normal)
+----------------------------
+-----------ACTUAL-----------
+
+Initializing sem1 with 0
+Initializing sem2 with 0
+Process 1 activated.
+Process 1 delay 400.
+Process 2 waiting on sem1.
+Process 3 waiting on sem1.
+Process 4 waiting on sem1.
+Process 5 waiting on sem1.
+Process 6 waiting on sem1.
+Process 7 waiting on sem1.
+Process 8 waiting on sem1.
+Process 9 waiting on sem1.
+Process 10 waiting on sem1.
+Process 1 done with delay.
+
+Process 1 is about to signal sem1 9 times.
+Process 1 signaling sem1 1 time.
+One process got sem1 and is about to wait sem2.
+Process 1 signaling sem1 2 time.
+One process got sem1 and is about to wait sem2.
+Process 1 signaling sem1 3 time.
+One process got sem1 and is about to wait sem2.
+Process 1 signaling sem1 4 time.
+One process got sem1 and is about to wait sem2.
+Process 1 signaling sem1 5 time.
+One process got sem1 and is about to wait sem2.
+Process 1 signaling sem1 6 time.
+One process got sem1 and is about to wait sem2.
+Process 1 signaling sem1 7 time.
+One process got sem1 and is about to wait sem2.
+Process 1 signaling sem1 8 time.
+One process got sem1 and is about to wait sem2.
+Process 1 signaling sem1 9 time.
+One process got sem1 and is about to wait sem2.
+
+Process 1 is about to signal sem2 9 times.
+Process 1 signaling sem2 1 time.
+One process got sem2 and is about to wait sem1 again.
+Process 1 signaling sem2 2 time.
+One process got sem2 and is about to wait sem1 again.
+Process 1 signaling sem2 3 time.
+One process got sem2 and is about to wait sem1 again.
+Process 1 signaling sem2 4 time.
+One process got sem2 and is about to wait sem1 again.
+Process 1 signaling sem2 5 time.
+One process got sem2 and is about to wait sem1 again.
+Process 1 signaling sem2 6 time.
+One process got sem2 and is about to wait sem1 again.
+Process 1 signaling sem2 7 time.
+One process got sem2 and is about to wait sem1 again.
+Process 1 signaling sem2 8 time.
+One process got sem2 and is about to wait sem1 again.
+Process 1 signaling sem2 9 time.
+One process got sem2 and is about to wait sem1 again.
+
+Process 1 is about to signal sem1 9 times.
+Process 1 signaling sem1 1 time.
+One process got sem1 and is about to exit.
+Process 1 signaling sem1 2 time.
+One process got sem1 and is about to exit.
+Process 1 signaling sem1 3 time.
+One process got sem1 and is about to exit.
+Process 1 signaling sem1 4 time.
+One process got sem1 and is about to exit.
+Process 1 signaling sem1 5 time.
+One process got sem1 and is about to exit.
+Process 1 signaling sem1 6 time.
+One process got sem1 and is about to exit.
+Process 1 signaling sem1 7 time.
+One process got sem1 and is about to exit.
+Process 1 signaling sem1 8 time.
+One process got sem1 and is about to exit.
+Process 1 signaling sem1 9 time.
+One process got sem1 and is about to exit.
+
+Process 1 exits.
+
+System exiting (normal)
+----------------------------
+----------DIFFERENCE--------
+No differences encountered
+----------------------------
+
+.............................. Test PASSED, worth 0.75 points
+
+> *************** Semaphore Test 4 ***************
+>	- Initialize sem1 to 1
+>	- Initialize sem2 to 10
+>	- Process 1 runs, delays for 400
+>	- Process 2 waits on sem1, shouldn't block
+>	- Process 2 waits on sem1, should block
+>	- Process 1 done with delay, waits on sem2 10 times, shouldn't block
+>	- Process 1 signals sem1
+>	- Process 1 waits on sem2, should block
+>	- Process 2 unblocks and signals sem2
+>	- Process 2 exits
+>	- Process 1 unblocks, and exits
+
+----------EXPECTED----------
+
+Initializing sem1 with 1
+Initializing sem2 with 10
+Process 1 activated.
+Process 1 delay 400.
+Process 2 waiting on sem1: shouldn't block.
+Process 2 waiting on sem1: should block.
+Process 1 done with delay.
+Process 1 waiting on sem2 (10 times): shouldn't block.
+Process 1 Signaling sem1.
+Process 1 Waiting sem2: should block.
+Process 2 got sem1 and is about to signal sem2.
+Process 2 exits.
+Process 1 got sem2.
+Process 1 exits.
+
+System exiting (normal)
+----------------------------
+-----------ACTUAL-----------
+
+Initializing sem1 with 1
+Initializing sem2 with 10
+Process 1 activated.
+Process 1 delay 400.
+Process 2 waiting on sem1: shouldn't block.
+Process 2 waiting on sem1: should block.
+Process 1 done with delay.
+Process 1 waiting on sem2 (10 times): shouldn't block.
+Process 1 Signaling sem1.
+Process 1 Waiting sem2: should block.
+Process 2 got sem1 and is about to signal sem2.
+Process 2 exits.
+Process 1 got sem2.
+Process 1 exits.
+
+System exiting (normal)
+----------------------------
+----------DIFFERENCE--------
+No differences encountered
+----------------------------
+
+.............................. Test PASSED, worth 0.75 points
+
+%%%%%%%%%%%%%%%%%%%%%% ROAD/CAR TESTS %%%%%%%%%%%%%%%%%%%%%%
+
+> *************** Road/Car Test 1 ***************
+>	- 2 cars	Time	Dir	MPH
+>	- Car 1		0	W	10
+>	- Car 2		41	W	90
+
+---------------------EXPECTED----------------------
+Car 1 enters at West
+Car 2 enters at West (since other car going same way)
+Car 1 exits at East
+Car 2 exits at East
+Road Trace: >>||
+---------------------------------------------------
+----------------------ACTUAL-----------------------
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.26-PA3g
+
+W1---------E Car 1 enters at 1
+W-1--------E Car 1 moves from 1 to 2
+W21--------E Car 2 enters at 1
+W2-1-------E Car 1 moves from 2 to 3
+W-21-------E Car 2 moves from 1 to 2
+W-2-1------E Car 1 moves from 3 to 4
+W--21------E Car 2 moves from 2 to 3
+W--2-1-----E Car 1 moves from 4 to 5
+W---21-----E Car 2 moves from 3 to 4
+W---2-1----E Car 1 moves from 5 to 6
+W----21----E Car 2 moves from 4 to 5
+W----2-1---E Car 1 moves from 6 to 7
+W-----21---E Car 2 moves from 5 to 6
+W-----2-1--E Car 1 moves from 7 to 8
+W------21--E Car 2 moves from 6 to 7
+W------2-1-E Car 1 moves from 8 to 9
+W-------21-E Car 2 moves from 7 to 8
+W-------2-1E Car 1 moves from 9 to 10
+W--------21E Car 2 moves from 8 to 9
+W--------2-E Car 1 exits road
+W---------2E Car 2 moves from 9 to 10
+W----------E Car 2 exits road
+Road Trace: >>||
+
+System exiting (normal)
+---------------------------------------------------
+---------------------DIFFERENCE--------------------
+No differences encountered
+---------------------------------------------------
+
+.............................. Test PASSED, worth 0.75 points
+
+> *************** Road/Car Test 2 ***************
+>	- 2 cars	Time	Dir	MPH
+>	- Car 1		0	E	40
+>	- Car 2		122	W	40
+
+---------------------EXPECTED----------------------
+Car 1 enters at East
+Car 2 waits at West (since other car going opposite way)
+Car 1 exits at West
+Car 2 enters at West
+Car 2 exits at East
+Road Trace: <|>|
+---------------------------------------------------
+----------------------ACTUAL-----------------------
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.26-PA3g
+
+W---------1E Car 1 enters at 10
+W--------1-E Car 1 moves from 10 to 9
+W-------1--E Car 1 moves from 9 to 8
+W------1---E Car 1 moves from 8 to 7
+W-----1----E Car 1 moves from 7 to 6
+W----1-----E Car 1 moves from 6 to 5
+W---1------E Car 1 moves from 5 to 4
+W--1-------E Car 1 moves from 4 to 3
+W-1--------E Car 1 moves from 3 to 2
+W1---------E Car 1 moves from 2 to 1
+W----------E Car 1 exits road
+W2---------E Car 2 enters at 1
+W-2--------E Car 2 moves from 1 to 2
+W--2-------E Car 2 moves from 2 to 3
+W---2------E Car 2 moves from 3 to 4
+W----2-----E Car 2 moves from 4 to 5
+W-----2----E Car 2 moves from 5 to 6
+W------2---E Car 2 moves from 6 to 7
+W-------2--E Car 2 moves from 7 to 8
+W--------2-E Car 2 moves from 8 to 9
+W---------2E Car 2 moves from 9 to 10
+W----------E Car 2 exits road
+Road Trace: <|>|
+
+System exiting (normal)
+---------------------------------------------------
+---------------------DIFFERENCE--------------------
+No differences encountered
+---------------------------------------------------
+
+.............................. Test PASSED, worth 0.75 points
+
+> *************** Road/Car Test 3 ***************
+>	- 3 cars	Time	Dir	MPH
+>	- Car 1		0	W	40
+>	- Car 2		42	W	40
+>	- Car 3		322	E	40
+
+---------------------EXPECTED----------------------
+Car 1 enters at West 
+Car 2 enters at West (since other car going same way)
+Car 3 waits at East (since other cars going opposite way)
+Car 1 exits at East 
+Car 2 exits at East 
+Car 3 enters at East 
+Car 3 exits at West
+Road Trace: >>||<|
+---------------------------------------------------
+----------------------ACTUAL-----------------------
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.26-PA3g
+
+W1---------E Car 1 enters at 1
+W-1--------E Car 1 moves from 1 to 2
+W21--------E Car 2 enters at 1
+W2-1-------E Car 1 moves from 2 to 3
+W-21-------E Car 2 moves from 1 to 2
+W-2-1------E Car 1 moves from 3 to 4
+W-2--1-----E Car 1 moves from 4 to 5
+W--2-1-----E Car 2 moves from 2 to 3
+W---21-----E Car 2 moves from 3 to 4
+W---2-1----E Car 1 moves from 5 to 6
+W----21----E Car 2 moves from 4 to 5
+W----2-1---E Car 1 moves from 6 to 7
+W----2--1--E Car 1 moves from 7 to 8
+W-----2-1--E Car 2 moves from 5 to 6
+W-----2--1-E Car 1 moves from 8 to 9
+W------2-1-E Car 2 moves from 6 to 7
+W------2--1E Car 1 moves from 9 to 10
+W-------2-1E Car 2 moves from 7 to 8
+W-------2--E Car 1 exits road
+W--------2-E Car 2 moves from 8 to 9
+W---------2E Car 2 moves from 9 to 10
+W----------E Car 2 exits road
+W---------3E Car 3 enters at 10
+W--------3-E Car 3 moves from 10 to 9
+W-------3--E Car 3 moves from 9 to 8
+W------3---E Car 3 moves from 8 to 7
+W-----3----E Car 3 moves from 7 to 6
+W----3-----E Car 3 moves from 6 to 5
+W---3------E Car 3 moves from 5 to 4
+W--3-------E Car 3 moves from 4 to 3
+W-3--------E Car 3 moves from 3 to 2
+W3---------E Car 3 moves from 2 to 1
+W----------E Car 3 exits road
+Road Trace: >>||<|
+
+System exiting (normal)
+---------------------------------------------------
+---------------------DIFFERENCE--------------------
+No differences encountered
+---------------------------------------------------
+
+.............................. Test PASSED, worth 0.75 points
+
+> *************** Road/Car Test 4 ***************
+>	- 3 cars	Time	Dir	MPH
+>	- Car 1		0	W	40
+>	- Car 2		122	E	40
+>	- Car 3		322	W	40
+
+---------------------EXPECTED----------------------
+Car 1 enters at West 
+Car 2 waits at East (since car going other way)
+Car 3 waits at West (since car waiting at other side)
+Car 1 exits at East 
+Car 2 enters at East
+Car 2 exits at West
+Car 3 enters at West 
+Car 3 exits at East
+Road Trace: >|<|>|
+---------------------------------------------------
+----------------------ACTUAL-----------------------
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.26-PA3g
+
+W1---------E Car 1 enters at 1
+W-1--------E Car 1 moves from 1 to 2
+W--1-------E Car 1 moves from 2 to 3
+W---1------E Car 1 moves from 3 to 4
+W----1-----E Car 1 moves from 4 to 5
+W-----1----E Car 1 moves from 5 to 6
+W------1---E Car 1 moves from 6 to 7
+W-------1--E Car 1 moves from 7 to 8
+W--------1-E Car 1 moves from 8 to 9
+W---------1E Car 1 moves from 9 to 10
+W----------E Car 1 exits road
+W---------2E Car 2 enters at 10
+W--------2-E Car 2 moves from 10 to 9
+W-------2--E Car 2 moves from 9 to 8
+W------2---E Car 2 moves from 8 to 7
+W-----2----E Car 2 moves from 7 to 6
+W----2-----E Car 2 moves from 6 to 5
+W---2------E Car 2 moves from 5 to 4
+W--2-------E Car 2 moves from 4 to 3
+W-2--------E Car 2 moves from 3 to 2
+W2---------E Car 2 moves from 2 to 1
+W----------E Car 2 exits road
+W3---------E Car 3 enters at 1
+W-3--------E Car 3 moves from 1 to 2
+W--3-------E Car 3 moves from 2 to 3
+W---3------E Car 3 moves from 3 to 4
+W----3-----E Car 3 moves from 4 to 5
+W-----3----E Car 3 moves from 5 to 6
+W------3---E Car 3 moves from 6 to 7
+W-------3--E Car 3 moves from 7 to 8
+W--------3-E Car 3 moves from 8 to 9
+W---------3E Car 3 moves from 9 to 10
+W----------E Car 3 exits road
+Road Trace: >|<|>|
+
+System exiting (normal)
+---------------------------------------------------
+---------------------DIFFERENCE--------------------
+No differences encountered
+---------------------------------------------------
+
+.............................. Test PASSED, worth 0.75 points
+
+> *************** Road/Car Test 5 ***************
+>	- 10 cars	Time	Dir	MPH
+>	- Car 1		0	W	40
+>	- Car 2		82	E	50
+>	- Car 3		82	E	60
+>	- Car 4		222	W	70
+>	- Car 5		222	W	80
+>	- Car 6		222	E	90
+>	- Car 7		222	W	90
+>	- Car 8		222	W	90
+>	- Car 9		222	E	90
+>	- Car 10	222	E	90
+
+---------------------EXPECTED----------------------
+Car 1 enters at West 
+Car 2 waits at East (since other car going opposite way)
+Car 3 waits at East (since other car going opposite way)
+Car 4 waits at West (since other cars waiting at opposite side)
+Car 5 waits at West (since other cars waiting at opposite side)
+Car 6 waits at East (since other car waiting at opposite side)
+Car 7 waits at West (since other cars waiting at opposite side)
+Car 8 waits at West (since other cars waiting at opposite side)
+Car 9 waits at East (since other cars waiting at opposite side)
+Car 10 waits at East (since other cars waiting at opposite side)
+Car 1 exits at East
+Car 2 enters at East
+Car 2 exits at West
+Car 4 enters at West
+Car 4 exits at East
+Car 3 enters at East
+Car 3 exits at West
+Car 5 enters at West
+Car 5 exits at East
+Car 6 enters at East
+Car 6 exit at West
+Car 7 enters at West
+Car 7 exits at East
+Car 9 enters at East
+Car 9 exit at West
+Car 8 enters at West
+Car 8 exits at East
+Car 10 enters at East
+Car 10 exits at West
+Road Trace: >|<|>|<|>|<|>|<|>|<|
+---------------------------------------------------
+----------------------ACTUAL-----------------------
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.26-PA3g
+
+W1---------E Car 1 enters at 1
+W-1--------E Car 1 moves from 1 to 2
+W--1-------E Car 1 moves from 2 to 3
+W---1------E Car 1 moves from 3 to 4
+W----1-----E Car 1 moves from 4 to 5
+W-----1----E Car 1 moves from 5 to 6
+W------1---E Car 1 moves from 6 to 7
+W-------1--E Car 1 moves from 7 to 8
+W--------1-E Car 1 moves from 8 to 9
+W---------1E Car 1 moves from 9 to 10
+W----------E Car 1 exits road
+W---------2E Car 2 enters at 10
+W--------2-E Car 2 moves from 10 to 9
+W-------2--E Car 2 moves from 9 to 8
+W------2---E Car 2 moves from 8 to 7
+W-----2----E Car 2 moves from 7 to 6
+W----2-----E Car 2 moves from 6 to 5
+W---2------E Car 2 moves from 5 to 4
+W--2-------E Car 2 moves from 4 to 3
+W-2--------E Car 2 moves from 3 to 2
+W2---------E Car 2 moves from 2 to 1
+W----------E Car 2 exits road
+W7---------E Car 7 enters at 1
+W-7--------E Car 7 moves from 1 to 2
+W--7-------E Car 7 moves from 2 to 3
+W---7------E Car 7 moves from 3 to 4
+W----7-----E Car 7 moves from 4 to 5
+W-----7----E Car 7 moves from 5 to 6
+W------7---E Car 7 moves from 6 to 7
+W-------7--E Car 7 moves from 7 to 8
+W--------7-E Car 7 moves from 8 to 9
+W---------7E Car 7 moves from 9 to 10
+W----------E Car 7 exits road
+W---------3E Car 3 enters at 10
+W--------3-E Car 3 moves from 10 to 9
+W-------3--E Car 3 moves from 9 to 8
+W------3---E Car 3 moves from 8 to 7
+W-----3----E Car 3 moves from 7 to 6
+W----3-----E Car 3 moves from 6 to 5
+W---3------E Car 3 moves from 5 to 4
+W--3-------E Car 3 moves from 4 to 3
+W-3--------E Car 3 moves from 3 to 2
+W3---------E Car 3 moves from 2 to 1
+W----------E Car 3 exits road
+W5---------E Car 5 enters at 1
+W-5--------E Car 5 moves from 1 to 2
+W--5-------E Car 5 moves from 2 to 3
+W---5------E Car 5 moves from 3 to 4
+W----5-----E Car 5 moves from 4 to 5
+W-----5----E Car 5 moves from 5 to 6
+W------5---E Car 5 moves from 6 to 7
+W-------5--E Car 5 moves from 7 to 8
+W--------5-E Car 5 moves from 8 to 9
+W---------5E Car 5 moves from 9 to 10
+W----------E Car 5 exits road
+W---------9E Car 9 enters at 10
+W--------9-E Car 9 moves from 10 to 9
+W-------9--E Car 9 moves from 9 to 8
+W------9---E Car 9 moves from 8 to 7
+W-----9----E Car 9 moves from 7 to 6
+W----9-----E Car 9 moves from 6 to 5
+W---9------E Car 9 moves from 5 to 4
+W--9-------E Car 9 moves from 4 to 3
+W-9--------E Car 9 moves from 3 to 2
+W9---------E Car 9 moves from 2 to 1
+W----------E Car 9 exits road
+W4---------E Car 4 enters at 1
+W-4--------E Car 4 moves from 1 to 2
+W--4-------E Car 4 moves from 2 to 3
+W---4------E Car 4 moves from 3 to 4
+W----4-----E Car 4 moves from 4 to 5
+W-----4----E Car 4 moves from 5 to 6
+W------4---E Car 4 moves from 6 to 7
+W-------4--E Car 4 moves from 7 to 8
+W--------4-E Car 4 moves from 8 to 9
+W---------4E Car 4 moves from 9 to 10
+W----------E Car 4 exits road
+W---------6E Car 6 enters at 10
+W--------6-E Car 6 moves from 10 to 9
+W-------6--E Car 6 moves from 9 to 8
+W------6---E Car 6 moves from 8 to 7
+W-----6----E Car 6 moves from 7 to 6
+W----6-----E Car 6 moves from 6 to 5
+W---6------E Car 6 moves from 5 to 4
+W--6-------E Car 6 moves from 4 to 3
+W-6--------E Car 6 moves from 3 to 2
+W6---------E Car 6 moves from 2 to 1
+W----------E Car 6 exits road
+W8---------E Car 8 enters at 1
+W-8--------E Car 8 moves from 1 to 2
+W--8-------E Car 8 moves from 2 to 3
+W---8------E Car 8 moves from 3 to 4
+W----8-----E Car 8 moves from 4 to 5
+W-----8----E Car 8 moves from 5 to 6
+W------8---E Car 8 moves from 6 to 7
+W-------8--E Car 8 moves from 7 to 8
+W--------8-E Car 8 moves from 8 to 9
+W---------8E Car 8 moves from 9 to 10
+W----------E Car 8 exits road
+
+Kernel Panic! Process 10 is deadlocked
+
+System exiting (abnormal)
+---------------------------------------------------
+---------------------DIFFERENCE--------------------
+--- ct5.out	Sat Feb 25 21:58:15 2017
++++ -	Fri Feb 19 16:26:50 2021
+@@ -1,1 +1,0 @@
+-Road Trace: >|<|>|<|>|<|>|<|>|<|
+---------------------------------------------------
+
+.............................. Test FAILED
+
+> *************** Road/Car Test 6 ***************
+>	- 9 cars	Time	Dir	MPH
+>	- Car 1		0	W	10
+>	- Car 2		0	W	20
+>	- Car 3		0	W	30
+>	- Car 4		0	W	40
+>	- Car 5		0	W	50
+>	- Car 6		0	W	60
+>	- Car 7		0	W	70
+>	- Car 8		0	W	80
+>	- Car 9		0	W	90
+
+---------------------EXPECTED----------------------
+Car 1 enters at West 
+Car 2 waits at West (since other car right in front)
+Car 3 waits at West (since other car right in front)
+Car 4 waits at West (since other car right in front)
+Car 5 waits at West (since other car right in front)
+Car 6 waits at West (since other car right in front)
+Car 7 waits at West (since other car right in front)
+Car 8 waits at West (since other car right in front)
+Car 9 waits at West (since other car right in front)
+Car 2 enters at West
+Car 3 enters at West
+Car 4 enters at West
+Car 5 enters at West
+Car 6 enters at West
+Car 7 enters at West
+Car 8 enters at West
+Car 9 enters at West
+Car 1 exits at East
+Car 2 exits at East
+Car 3 exits at East
+Car 4 exits at East
+Car 5 exits at East
+Car 6 exits at East
+Car 7 exits at East
+Car 8 exits at East
+Car 9 exits at East
+Road Trace: >>>>>>>>>|||||||||
+---------------------------------------------------
+----------------------ACTUAL-----------------------
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.26-PA3g
+
+W1---------E Car 1 enters at 1
+W-1--------E Car 1 moves from 1 to 2
+W21--------E Car 2 enters at 1
+W2-1-------E Car 1 moves from 2 to 3
+W-21-------E Car 2 moves from 1 to 2
+W-2-1------E Car 1 moves from 3 to 4
+W32-1------E Car 3 enters at 1
+W3-21------E Car 2 moves from 2 to 3
+W-321------E Car 3 moves from 1 to 2
+W-32-1-----E Car 1 moves from 4 to 5
+W-3-21-----E Car 2 moves from 3 to 4
+W43-21-----E Car 4 enters at 1
+W4-321-----E Car 3 moves from 2 to 3
+W4-32-1----E Car 1 moves from 5 to 6
+W-432-1----E Car 4 moves from 1 to 2
+W-43-21----E Car 2 moves from 4 to 5
+W-4-321----E Car 3 moves from 3 to 4
+W54-321----E Car 5 enters at 1
+W54-32-1---E Car 1 moves from 6 to 7
+W5-432-1---E Car 4 moves from 2 to 3
+W-5432-1---E Car 5 moves from 1 to 2
+W-543-21---E Car 2 moves from 5 to 6
+W-54-321---E Car 3 moves from 4 to 5
+W-54-32-1--E Car 1 moves from 7 to 8
+W-5-432-1--E Car 4 moves from 3 to 4
+W65-432-1--E Car 6 enters at 1
+W6-5432-1--E Car 5 moves from 2 to 3
+W-65432-1--E Car 6 moves from 1 to 2
+W-6543-21--E Car 2 moves from 6 to 7
+W-654-321--E Car 3 moves from 5 to 6
+W-654-32-1-E Car 1 moves from 8 to 9
+W-65-432-1-E Car 4 moves from 4 to 5
+W-6-5432-1-E Car 5 moves from 3 to 4
+W76-5432-1-E Car 7 enters at 1
+W7-65432-1-E Car 6 moves from 2 to 3
+W7-6543-21-E Car 2 moves from 7 to 8
+W-76543-21-E Car 7 moves from 1 to 2
+W-7654-321-E Car 3 moves from 6 to 7
+W-7654-32-1E Car 1 moves from 9 to 10
+W-765-432-1E Car 4 moves from 5 to 6
+W-76-5432-1E Car 5 moves from 4 to 5
+W-7-65432-1E Car 6 moves from 3 to 4
+W87-65432-1E Car 8 enters at 1
+W87-6543-21E Car 2 moves from 8 to 9
+W8-76543-21E Car 7 moves from 2 to 3
+W-876543-21E Car 8 moves from 1 to 2
+W-87654-321E Car 3 moves from 7 to 8
+W-87654-32-E Car 1 exits road
+W-8765-432-E Car 4 moves from 6 to 7
+W-876-5432-E Car 5 moves from 5 to 6
+W-87-65432-E Car 6 moves from 4 to 5
+W-87-6543-2E Car 2 moves from 9 to 10
+W-8-76543-2E Car 7 moves from 3 to 4
+W98-76543-2E Car 9 enters at 1
+W9-876543-2E Car 8 moves from 2 to 3
+W-9876543-2E Car 9 moves from 1 to 2
+W-987654-32E Car 3 moves from 8 to 9
+W-987654-3-E Car 2 exits road
+W-98765-43-E Car 4 moves from 7 to 8
+W-9876-543-E Car 5 moves from 6 to 7
+W-9876-54-3E Car 3 moves from 9 to 10
+W-987-654-3E Car 6 moves from 5 to 6
+W-987-65-43E Car 4 moves from 8 to 9
+W-98-765-43E Car 7 moves from 4 to 5
+W-98-765-4-E Car 3 exits road
+W-9-8765-4-E Car 8 moves from 3 to 4
+W-9-876-54-E Car 5 moves from 7 to 8
+W--9876-54-E Car 9 moves from 2 to 3
+W--9876-5-4E Car 4 moves from 9 to 10
+W--987-65-4E Car 6 moves from 6 to 7
+W--98-765-4E Car 7 moves from 5 to 6
+W--98-76-54E Car 5 moves from 8 to 9
+W--98-76-5-E Car 4 exits road
+W--9-876-5-E Car 8 moves from 4 to 5
+W--9-87-65-E Car 6 moves from 7 to 8
+W---987-65-E Car 9 moves from 3 to 4
+W---987-6-5E Car 5 moves from 9 to 10
+W---98-76-5E Car 7 moves from 6 to 7
+W---9-876-5E Car 8 moves from 5 to 6
+W---9-87-65E Car 6 moves from 8 to 9
+W---9-87-6-E Car 5 exits road
+W----987-6-E Car 9 moves from 4 to 5
+W----98-76-E Car 7 moves from 7 to 8
+W----98-7-6E Car 6 moves from 9 to 10
+W----9-87-6E Car 8 moves from 6 to 7
+W----9-8-76E Car 7 moves from 8 to 9
+W----9-8-7-E Car 6 exits road
+W-----98-7-E Car 9 moves from 5 to 6
+W-----9-87-E Car 8 moves from 7 to 8
+W-----9-8-7E Car 7 moves from 9 to 10
+W------98-7E Car 9 moves from 6 to 7
+W------9-87E Car 8 moves from 8 to 9
+W------9-8-E Car 7 exits road
+W-------98-E Car 9 moves from 7 to 8
+W-------9-8E Car 8 moves from 9 to 10
+W--------98E Car 9 moves from 8 to 9
+W--------9-E Car 8 exits road
+W---------9E Car 9 moves from 9 to 10
+W----------E Car 9 exits road
+Road Trace: >>>>>>>>|>||||||||
+
+System exiting (normal)
+---------------------------------------------------
+---------------------DIFFERENCE--------------------
+--- ct6.out	Sun Feb 23 14:01:05 2020
++++ -	Fri Feb 19 16:27:11 2021
+@@ -1,1 +1,1 @@
+-Road Trace: >>>>>>>>>|||||||||
++Road Trace: >>>>>>>>|>||||||||
+---------------------------------------------------
+
+.............................. Test FAILED
+
+> *************** Road/Car Test 7 ***************
+>	- 10 cars	Time	Dir	MPH
+>	- Car 1	 	0	W	 5
+>	- Car 2		182	W	10
+>	- Car 3	 	182	W	20
+>	- Car 4	 	182	W	30
+>	- Car 5		182	W	40
+>	- Car 6		82	E	50
+>	- Car 7		82	E	60
+>	- Car 8		82	E	70
+>	- Car 9		82	E	80
+>	- Car 10	82	E	90
+
+---------------------EXPECTED----------------------
+Car 1 enters at West 
+Car 6 waits at East (since other car going opposite way)
+Car 7 waits at East (since other car going opposite way)
+Car 8 waits at East (since other car going opposite way)
+Car 9 waits at East (since other car going opposite way)
+Car 10 waits at East (since other car going opposite way)
+Car 2 waits at West (since other cars waiting at opposite side)
+Car 3 waits at West (since other cars waiting at opposite side)
+Car 4 waits at West (since other cars waiting at opposite side)
+Car 5 waits at West (since other cars waiting at opposite side)
+Car 1 exits at East
+Car 6 enters at East
+Car 6 exits at West
+Car 2 enters at West
+Car 2 exits at East
+Car 7 enters at East
+Car 7 exits at West
+Car 3 enters at West
+Car 3 exits at East
+Car 8 enters at East
+Car 8 exits at West
+Car 4 enters at West
+Car 4 exits at East
+Car 9 enters at East
+Car 9 exits at West
+Car 5 enters at West
+Car 5 exits at East
+Car 10 enters at East
+Car 10 exits at West
+Road Trace: >|<|>|<|>|<|>|<|>|<|
+---------------------------------------------------
+----------------------ACTUAL-----------------------
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.26-PA3g
+
+W1---------E Car 1 enters at 1
+W-1--------E Car 1 moves from 1 to 2
+W--1-------E Car 1 moves from 2 to 3
+W---1------E Car 1 moves from 3 to 4
+W----1-----E Car 1 moves from 4 to 5
+W-----1----E Car 1 moves from 5 to 6
+W------1---E Car 1 moves from 6 to 7
+W-------1--E Car 1 moves from 7 to 8
+W--------1-E Car 1 moves from 8 to 9
+W---------1E Car 1 moves from 9 to 10
+W----------E Car 1 exits road
+W---------6E Car 6 enters at 10
+W--------6-E Car 6 moves from 10 to 9
+W-------6--E Car 6 moves from 9 to 8
+W------6---E Car 6 moves from 8 to 7
+W-----6----E Car 6 moves from 7 to 6
+W----6-----E Car 6 moves from 6 to 5
+W---6------E Car 6 moves from 5 to 4
+W--6-------E Car 6 moves from 4 to 3
+W-6--------E Car 6 moves from 3 to 2
+W6---------E Car 6 moves from 2 to 1
+W----------E Car 6 exits road
+W3---------E Car 3 enters at 1
+W-3--------E Car 3 moves from 1 to 2
+W--3-------E Car 3 moves from 2 to 3
+W---3------E Car 3 moves from 3 to 4
+W----3-----E Car 3 moves from 4 to 5
+W-----3----E Car 3 moves from 5 to 6
+W------3---E Car 3 moves from 6 to 7
+W-------3--E Car 3 moves from 7 to 8
+W--------3-E Car 3 moves from 8 to 9
+W---------3E Car 3 moves from 9 to 10
+W----------E Car 3 exits road
+W---------9E Car 9 enters at 10
+W--------9-E Car 9 moves from 10 to 9
+W-------9--E Car 9 moves from 9 to 8
+W------9---E Car 9 moves from 8 to 7
+W-----9----E Car 9 moves from 7 to 6
+W----9-----E Car 9 moves from 6 to 5
+W---9------E Car 9 moves from 5 to 4
+W--9-------E Car 9 moves from 4 to 3
+W-9--------E Car 9 moves from 3 to 2
+W9---------E Car 9 moves from 2 to 1
+W----------E Car 9 exits road
+W2---------E Car 2 enters at 1
+W-2--------E Car 2 moves from 1 to 2
+W--2-------E Car 2 moves from 2 to 3
+W---2------E Car 2 moves from 3 to 4
+W----2-----E Car 2 moves from 4 to 5
+W-----2----E Car 2 moves from 5 to 6
+W------2---E Car 2 moves from 6 to 7
+W-------2--E Car 2 moves from 7 to 8
+W--------2-E Car 2 moves from 8 to 9
+W---------2E Car 2 moves from 9 to 10
+W----------E Car 2 exits road
+W---------7E Car 7 enters at 10
+W--------7-E Car 7 moves from 10 to 9
+W-------7--E Car 7 moves from 9 to 8
+W------7---E Car 7 moves from 8 to 7
+W-----7----E Car 7 moves from 7 to 6
+W----7-----E Car 7 moves from 6 to 5
+W---7------E Car 7 moves from 5 to 4
+W--7-------E Car 7 moves from 4 to 3
+W-7--------E Car 7 moves from 3 to 2
+W7---------E Car 7 moves from 2 to 1
+W----------E Car 7 exits road
+W5---------E Car 5 enters at 1
+W-5--------E Car 5 moves from 1 to 2
+W--5-------E Car 5 moves from 2 to 3
+W---5------E Car 5 moves from 3 to 4
+W----5-----E Car 5 moves from 4 to 5
+W-----5----E Car 5 moves from 5 to 6
+W------5---E Car 5 moves from 6 to 7
+W-------5--E Car 5 moves from 7 to 8
+W--------5-E Car 5 moves from 8 to 9
+W---------5E Car 5 moves from 9 to 10
+W----------E Car 5 exits road
+W---------8E Car 8 enters at 10
+W--------8-E Car 8 moves from 10 to 9
+W-------8--E Car 8 moves from 9 to 8
+W------8---E Car 8 moves from 8 to 7
+W-----8----E Car 8 moves from 7 to 6
+W----8-----E Car 8 moves from 6 to 5
+W---8------E Car 8 moves from 5 to 4
+W--8-------E Car 8 moves from 4 to 3
+W-8--------E Car 8 moves from 3 to 2
+W8---------E Car 8 moves from 2 to 1
+W----------E Car 8 exits road
+W4---------E Car 4 enters at 1
+W-4--------E Car 4 moves from 1 to 2
+W--4-------E Car 4 moves from 2 to 3
+W---4------E Car 4 moves from 3 to 4
+W----4-----E Car 4 moves from 4 to 5
+W-----4----E Car 4 moves from 5 to 6
+W------4---E Car 4 moves from 6 to 7
+W-------4--E Car 4 moves from 7 to 8
+W--------4-E Car 4 moves from 8 to 9
+W---------4E Car 4 moves from 9 to 10
+W----------E Car 4 exits road
+
+Kernel Panic! Process 10 is deadlocked
+
+System exiting (abnormal)
+---------------------------------------------------
+---------------------DIFFERENCE--------------------
+--- ct7.out	Sat Feb 25 21:58:15 2017
++++ -	Fri Feb 19 16:27:46 2021
+@@ -1,1 +1,0 @@
+-Road Trace: >|<|>|<|>|<|>|<|>|<|
+---------------------------------------------------
+
+.............................. Test FAILED
+
+> *************** Road/Car Test 8 ***************
+>	- 8 cars	Time	Dir	MPH
+>	- Car 1		0	W	5
+>	- Car 2		42	W	20
+>	- Car 3	 	322	W	20
+>	- Car 4	 	322	W	20
+>	- Car 5		322	W	20
+>	- Car 6		82	E	20
+>	- Car 7		82	E	20
+>	- Car 8		82	E	20
+
+---------------------EXPECTED----------------------
+Car 1 enters at West 
+Car 2 waits at West (since other car right in front)
+Car 6 waits at East (since other car going opposite way)
+Car 7 waits at East (since other car going opposite way)
+Car 8 waits at East (since other car going opposite way)
+Car 3 waits at West (since other cars waiting at opposite side)
+Car 4 waits at West (since other cars waiting at opposite side)
+Car 5 waits at West (since other cars waiting at opposite side)
+Car 1 exits at East
+Car 6 enters at East
+Car 6 exits at West
+Car 2 enters at West
+Car 2 exits at East
+Car 7 enters at East
+Car 7 exits at West
+Car 3 enters at West
+Car 3 exits at East
+Car 8 enters at East
+Car 8 exits at West
+Car 4 enters at West
+Car 5 enters at West (since no cars waiting at opposite side)
+Car 4 exits at East
+Car 5 exits at East
+Road Trace: >|<|>|<|>|<|>>||
+---------------------------------------------------
+----------------------ACTUAL-----------------------
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.26-PA3g
+
+W1---------E Car 1 enters at 1
+W-1--------E Car 1 moves from 1 to 2
+W--1-------E Car 1 moves from 2 to 3
+W---1------E Car 1 moves from 3 to 4
+W----1-----E Car 1 moves from 4 to 5
+W-----1----E Car 1 moves from 5 to 6
+W------1---E Car 1 moves from 6 to 7
+W-------1--E Car 1 moves from 7 to 8
+W--------1-E Car 1 moves from 8 to 9
+W---------1E Car 1 moves from 9 to 10
+W----------E Car 1 exits road
+W---------6E Car 6 enters at 10
+W--------6-E Car 6 moves from 10 to 9
+W-------6--E Car 6 moves from 9 to 8
+W------6---E Car 6 moves from 8 to 7
+W-----6----E Car 6 moves from 7 to 6
+W----6-----E Car 6 moves from 6 to 5
+W---6------E Car 6 moves from 5 to 4
+W--6-------E Car 6 moves from 4 to 3
+W-6--------E Car 6 moves from 3 to 2
+W6---------E Car 6 moves from 2 to 1
+W----------E Car 6 exits road
+W2---------E Car 2 enters at 1
+W-2--------E Car 2 moves from 1 to 2
+W--2-------E Car 2 moves from 2 to 3
+W---2------E Car 2 moves from 3 to 4
+W----2-----E Car 2 moves from 4 to 5
+W-----2----E Car 2 moves from 5 to 6
+W------2---E Car 2 moves from 6 to 7
+W-------2--E Car 2 moves from 7 to 8
+W--------2-E Car 2 moves from 8 to 9
+W---------2E Car 2 moves from 9 to 10
+W----------E Car 2 exits road
+W---------7E Car 7 enters at 10
+W--------7-E Car 7 moves from 10 to 9
+W-------7--E Car 7 moves from 9 to 8
+W------7---E Car 7 moves from 8 to 7
+W-----7----E Car 7 moves from 7 to 6
+W----7-----E Car 7 moves from 6 to 5
+W---7------E Car 7 moves from 5 to 4
+W--7-------E Car 7 moves from 4 to 3
+W-7--------E Car 7 moves from 3 to 2
+W7---------E Car 7 moves from 2 to 1
+W----------E Car 7 exits road
+W3---------E Car 3 enters at 1
+W-3--------E Car 3 moves from 1 to 2
+W--3-------E Car 3 moves from 2 to 3
+W---3------E Car 3 moves from 3 to 4
+W----3-----E Car 3 moves from 4 to 5
+W-----3----E Car 3 moves from 5 to 6
+W------3---E Car 3 moves from 6 to 7
+W-------3--E Car 3 moves from 7 to 8
+W--------3-E Car 3 moves from 8 to 9
+W---------3E Car 3 moves from 9 to 10
+W----------E Car 3 exits road
+W---------8E Car 8 enters at 10
+W--------8-E Car 8 moves from 10 to 9
+W-------8--E Car 8 moves from 9 to 8
+W------8---E Car 8 moves from 8 to 7
+W-----8----E Car 8 moves from 7 to 6
+W----8-----E Car 8 moves from 6 to 5
+W---8------E Car 8 moves from 5 to 4
+W--8-------E Car 8 moves from 4 to 3
+W-8--------E Car 8 moves from 3 to 2
+W8---------E Car 8 moves from 2 to 1
+W----------E Car 8 exits road
+W5---------E Car 5 enters at 1
+W-5--------E Car 5 moves from 1 to 2
+W45--------E Car 4 enters at 1
+W4-5-------E Car 5 moves from 2 to 3
+W-45-------E Car 4 moves from 1 to 2
+W-4-5------E Car 5 moves from 3 to 4
+W--45------E Car 4 moves from 2 to 3
+W--4-5-----E Car 5 moves from 4 to 5
+W---45-----E Car 4 moves from 3 to 4
+W---4-5----E Car 5 moves from 5 to 6
+W---4--5---E Car 5 moves from 6 to 7
+W----4-5---E Car 4 moves from 4 to 5
+W----4--5--E Car 5 moves from 7 to 8
+W-----4-5--E Car 4 moves from 5 to 6
+W-----4--5-E Car 5 moves from 8 to 9
+W------4-5-E Car 4 moves from 6 to 7
+W------4--5E Car 5 moves from 9 to 10
+W-------4-5E Car 4 moves from 7 to 8
+W-------4--E Car 5 exits road
+W--------4-E Car 4 moves from 8 to 9
+W---------4E Car 4 moves from 9 to 10
+W----------E Car 4 exits road
+Road Trace: >|<|>|<|>|<|>>||
+
+System exiting (normal)
+---------------------------------------------------
+---------------------DIFFERENCE--------------------
+No differences encountered
+---------------------------------------------------
+
+.............................. Test PASSED, worth 0.75 points
+
+************************** TOTAL POINTS = 6.75 **************************
